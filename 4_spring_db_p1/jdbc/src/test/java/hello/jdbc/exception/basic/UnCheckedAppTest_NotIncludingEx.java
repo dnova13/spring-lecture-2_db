@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @Slf4j
-public class UnCheckedAppTest_1 {
+public class UnCheckedAppTest_NotIncludingEx {
 
     @Test
     void printEx() {
@@ -54,7 +54,7 @@ public class UnCheckedAppTest_1 {
             try {
                 runSQL();
             } catch (SQLException e) {
-                throw new RuntimeSQLException(e);
+                throw new RuntimeSQLException();
             }
         }
 
@@ -70,6 +70,9 @@ public class UnCheckedAppTest_1 {
     }
 
     static class RuntimeSQLException extends RuntimeException {
+        public RuntimeSQLException() {
+        }
+
         public RuntimeSQLException(Throwable cause) {
             super(cause);
         }

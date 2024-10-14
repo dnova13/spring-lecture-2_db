@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @Slf4j
-public class UnCheckedAppTest_1 {
+public class UnCheckedAppTest_IncludingEx {
 
     @Test
     void printEx() {
