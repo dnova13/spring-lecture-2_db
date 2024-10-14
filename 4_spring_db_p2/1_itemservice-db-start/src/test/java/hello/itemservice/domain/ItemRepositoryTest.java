@@ -69,8 +69,10 @@ class ItemRepositoryTest {
         itemRepository.save(item2);
         itemRepository.save(item3);
 
-        //둘 다 없음 검증
+        //둘 다 없음 검증 //여기서 3개 이상이 조회되는 문제가 발생
         test(null, null, item1, item2, item3);
+
+
         test("", null, item1, item2, item3);
 
         //itemName 검증
