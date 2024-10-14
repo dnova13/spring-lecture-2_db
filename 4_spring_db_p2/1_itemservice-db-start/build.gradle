@@ -35,9 +35,11 @@ dependencies {
 	//H2 데이터베이스 추가
 	runtimeOnly 'com.h2database:h2'
 
-
 	// maria db 라이브러리 셋팅
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+	//MyBatis 추가
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
 }
 
 tasks.named('test') {
